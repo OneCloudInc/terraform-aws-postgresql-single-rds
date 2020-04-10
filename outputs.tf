@@ -25,3 +25,7 @@ output "password" {
 output "username" {
   value = "${aws_db_instance.postgresql.username}"
 }
+
+output "database" {
+  value = "${aws_db_instance.postgresql.name}"
+}
