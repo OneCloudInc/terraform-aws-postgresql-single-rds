@@ -21,3 +21,7 @@ output "endpoint" {
 output "password" {
   value = "${aws_db_instance.postgresql.password}"
 }
+
+output "username" {
+  value = "${aws_db_instance.postgresql.username}"
+}
