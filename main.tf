@@ -49,7 +49,7 @@ resource "aws_cloudwatch_metric_alarm" "database_cpu" {
   threshold           = "${var.alarm_cpu_threshold}"
 
   dimensions {
-    DBInstanceIdentifier = "${aws_db_instance.postgresql.*.id[count.index]}"
+    DBInstanceIdentifier = "${aws_db_instance.postgresql.id}"
   }
 
   alarm_actions = ["${var.alarm_actions}"]
